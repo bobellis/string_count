@@ -6,10 +6,14 @@ describe('String#string_count') do
     expect('circus'.count_words('circus')).to(eq(1))
   end
 
-  it('it takes a target word and a string with itself listed twice to check and returns 2') do
+  it('it takes a target word and a string with itself listed multiple times to check and returns number of times it appears') do
     expect('circus'.count_words('circus circus')).to(eq(2))
   end
 
+  it('it takes a target word and a string with itself listed multiple times as well as other words and returns the number of times it appears') do
+    expect('circus'.count_words('circus clown circus elephant circus')).to(eq(3))
+  end
+  
   #it("takes a target word and a string then counts the number of times the target word appears in the string") do
   #end
 end
