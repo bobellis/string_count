@@ -3,6 +3,11 @@ class String
     target_word = self.strip()
     count = 0
     words_to_check = words_to_check.gsub(/\,/, '')
+    words_to_check = words_to_check.gsub(/\./, '')
+    words_to_check = words_to_check.gsub(/\;/, '')
+    words_to_check = words_to_check.gsub(/\:/, '')
+    words_to_check = words_to_check.gsub(/\"/, '')
+    words_to_check = words_to_check.gsub(/\'/, '')
     words_to_check = words_to_check.split(" ")
     words_to_check.each do |word|
       if word.strip() == target_word
